@@ -1,0 +1,320 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    text-decoration: underline;
+    font-weight: bold;
+    color: yellow;
+}
+
+
+/* Esconder el menú de hamburguesa inicialmente */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none; /* Ocultar el menú inicialmente */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: #333;
+        opacity: 85%;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex; /* Mostrar el menú cuando se haga clic */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+
+/* Index */
+.main-content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.description p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Skills, Technology, Languages Containers */
+.skills-container, .experience-container, .technology-container, .languages-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s, transform 1s;
+}
+
+.skill,.experience, .technology, .languages {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 100px;
+}
+
+@media (max-width: 600px) {
+    .skill, .experience, .technology, .languages {
+        min-width: 80px;
+        padding: 15px;
+    }
+}
+
+/* Responsive content */
+@media (max-width: 800px) {
+    .profile-image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .description p {
+        font-size: 0.9em;
+    }
+}
+
+h1{
+    font-size: 20px;
+    color: gray;
+}
+
+h3{
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Projects */
+.projects-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s, transform 1s;
+}
+
+.project {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.project h3 {
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.project p {
+    font-size: 16px;
+    color: #666;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit; /* Mantiene el color de texto por defecto */
+}
+
+.project-link:hover .project {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Efecto de agrandar un poco al pasar el ratón */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+    .project-container {
+        grid-template-columns: 1fr; /* Cambia a una columna en pantallas más pequeñas */
+    }
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.info-item i {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form Styles */
+.form-container {
+    background-color: #fff;
+    padding: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 600px;
+    border-radius: 15px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-large {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+textarea.input-large {
+    height: 100px;
+}
+
+/* Button Styles */
+.form-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-save {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-clear {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-back {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

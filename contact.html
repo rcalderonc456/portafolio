@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="hamburger" id="hamburger">
+                &#9776; <!-- Símbolo de hamburguesa -->
+            </button>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact Me</a></li>
+                <li><a href="cv/CV E. Randall Andrés Calderón Calderón .pdf" download="CV_Randall_Calderon_EN.pdf">Download CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <h1>Contact Me</h1>
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="icon-location"></i>
+                <address>San José, Costa Rica</address>
+            </div>
+            <div class="info-item">
+                <i class="icon-envelope"></i>
+                <span>Email: randallcalderon2013@gmail.com</span>
+            </div>
+            <div class="info-item">
+                <i class="icon-phone"></i>
+                <span>Phone: +506 83809699</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="form-container">
+        <h1>Contact Form</h1>
+        <form id="frm">
+            <div class="form-grid">
+                <div class="form-field">
+                    <label for="txtNombre">Name:</label>
+                    <input type="text" id="txtNombre" name="txtNombre" class="input-large">
+                </div>
+                <div class="form-field">
+                    <label for="txtApellidos">Last Name:</label>
+                    <input type="text" id="txtApellidos" name="txtApellidos" class="input-large">
+                </div>
+                <div class="form-field">
+                    <label for="txtCorreo">Email:</label>
+                    <div class="email-container">
+                        <input type="email" id="txtCorreo" name="txtCorreo" class="input-large">
+                        <span class="email-message">Only one email can be entered, duplicate emails are not allowed</span>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="txtAsunto">Subject:</label>
+                    <input type="text" id="txtAsunto" name="txtAsunto" class="input-large">
+                </div>
+                <div class="form-field">
+                    <label for="txtMensaje">Message:</label>
+                    <textarea id="txtMensaje" name="txtMensaje" rows="4" cols="50" class="input-large"></textarea>
+                </div>
+            </div>
+            <div class="form-buttons">
+                <button id="btnGuardar" class="btn btn-save">Save</button>
+                <button id="btnLimpiar" type="button" class="btn btn-clear">Clear</button>
+                <button id="btnRegresar" class="btn btn-back">Back</button>
+            </div>
+        </form>
+    </div>
+        <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>  
+        <script src="firebase-config.js"></script>
+        <script src="scripts.js"></script>
+</body>
+</html>
